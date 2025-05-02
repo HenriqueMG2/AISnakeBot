@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d54bae5b667e3f439d6586f7e5b0a1a, type: 3}
+  m_Name: PlayerBotAuto
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  owner: {fileID: 0}
+  ownerMovement: {fileID: 0}
+  timeChangeDir: 5
+  randomPoint: {x: 0, y: 0, z: 0}
+  rotationSpeed: 2
