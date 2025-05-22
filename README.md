@@ -57,20 +57,3 @@ As cobrinhas usam uma combinação de **comportamentos de steering** para decidi
 
 4. Rode o projeto:
    - Pressione Play dentro do editor Unity para iniciar a simulação.
-
-📚 Referências
-Millington, I. (2019). AI for Games (3rd ed.). CRC Press.
-
-Jogo de referência: Slither.io
-
-Repositório base utilizado: https://github.com/fellowsheep/IA2022-2
-
-Outros materiais consultados:
-
-Artificial Intelligence for Games – Ian Millington & John Funge
-
-Programming Game AI by Example – Mat Buckland
-
-Steering Behaviors for Autonomous Characters – Craig Reynolds (1999)
-
-Game AI Pro – Steve Rabin (série)
