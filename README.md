@@ -45,4 +45,32 @@ As cobrinhas usam uma combinação de **comportamentos de steering** para decidi
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/snake-ai-unity.git
+   
+2. Abra o projeto no Unity:
+   - Use o Unity Hub.
+   - Clique em "Add" e selecione a pasta do projeto clonado.
+   - Certifique-se de estar usando a versão Unity 2021.3 ou superior.
+     
+3. Abra a cena principal:
+   - Vá até a pasta Assets/Scenes/.
+   - Dê dois cliques em MainScene.unity para abri-la.
 
+4. Rode o projeto:
+   - Pressione Play dentro do editor Unity para iniciar a simulação.
+
+📚 Referências
+Millington, I. (2019). AI for Games (3rd ed.). CRC Press.
+
+Jogo de referência: Slither.io
+
+Repositório base utilizado: https://github.com/fellowsheep/IA2022-2
+
+Outros materiais consultados:
+
+Artificial Intelligence for Games – Ian Millington & John Funge
+
+Programming Game AI by Example – Mat Buckland
+
+Steering Behaviors for Autonomous Characters – Craig Reynolds (1999)
+
+Game AI Pro – Steve Rabin (série)
