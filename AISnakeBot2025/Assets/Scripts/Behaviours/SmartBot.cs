@@ -87,7 +87,7 @@ public class SmartBot : AIBehaviour
 
     GameObject FindClosestEnemy()
     {
-        GameObject[] snakes = GameObject.FindGameObjectsWithTag("Player"); // ajustar a tag se necessário
+        GameObject[] snakes = GameObject.FindGameObjectsWithTag("Player");
         GameObject closest = null;
         float minDist = Mathf.Infinity;
 
