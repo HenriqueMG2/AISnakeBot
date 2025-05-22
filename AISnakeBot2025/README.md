@@ -2,11 +2,14 @@
 
 Este framework foi desenvolvido para suportar o estudo e criação de agentes inteligentes inspirados no comportamento das cobrinhas do jogo **Slither.io**. Ele é voltado para a disciplina de Inteligência Artificial para Jogos, permitindo que estudantes explorem conceitos de agentes reativos, movimentação e tomada de decisão.
 
+Desenvolvido com base no repositório original:  
+🔗 [https://github.com/fellowsheep/IA2022-2](https://github.com/fellowsheep/IA2022-2)
+
 ---
 
 ## 📁 Estrutura dos Scripts
 
-### 📄GameLogic.cs
+### 📄 GameLogic.cs
 
 Responsável por:
 
@@ -46,12 +49,12 @@ Exibe o nome da cobra acima do agente com `TextMeshPro`.
 
 **Classe base** para implementar diferentes comportamentos de IA.
 
-- Métodos principais: Init() e Execute()
-- Possui os seguintes atributos, que são comuns a todas as cobrinhas:
-  - `owner`: referência para a cobra (GameObject) que está usando esse comportamento.
+- Métodos principais: `Init()` e `Execute()`.
+- Atributos:
+  - `owner`: referência para a cobra (GameObject).
   - `direction`: direção atual do movimento da cobra.
-  - `randomPoint`: ponto aleatório que pode ser usado por comportamentos simples como wander.
-  - `target`: referência opcional a outro objeto de interesse (ex: orbe ou jogador).
+  - `randomPoint`: ponto aleatório para wander.
+  - `target`: referência opcional a outro objeto de interesse.
 
 ---
 
@@ -67,6 +70,16 @@ Exibe o nome da cobra acima do agente com `TextMeshPro`.
 - Controlado pelo mouse (para testes).
 - Rotaciona e se movimenta em direção ao cursor.
 
+### SmartBot.cs ✅
+
+- Agente que **prioriza objetivos** com base em regras simples:
+  1. **Seek Orb** (busca o orbe mais próximo).
+  2. **Flee** (foge de inimigos próximos).
+  3. **Wander** (anda aleatoriamente se não houver estímulo).
+- Usa `perceptionRadius` e `dangerRadius` para definir zonas de interesse e risco.
+- Desenha círculos de percepção e perigo com `Debug.DrawLine` nos `Gizmos`.
+- Implementa uma IA baseada em **prioridades dinâmicas**.
+
 ---
 
 ## 🚀 Como Criar um Novo Bot
@@ -76,7 +89,9 @@ Exibe o nome da cobra acima do agente com `TextMeshPro`.
 3. Registre como um `ScriptableObject` com `[CreateAssetMenu]`.
 4. Associe no editor Unity à cobra desejada via `SnakeMovement.SetBehaviour()`.
 
-### 🐍 Como instanciar cobras no código
+---
+
+## 🐍 Como Instanciar Cobras no Código
 
 No script `GameLogic.cs`, a criação de novas cobrinhas é feita com `Instantiate`:
 
@@ -84,24 +99,9 @@ No script `GameLogic.cs`, a criação de novas cobrinhas é feita com `Instantia
 GameObject newSnake = Instantiate(snakePrefab, new Vector3(5, 5, 0), Quaternion.identity);
 newSnake.name = "SnakeBot01";
 snakes.Add(newSnake);
-```
 
-A seguir, define-se o comportamento da cobrinha pelo índice no array de ScriptableObjects chamado `behaviors`:
-
-```csharp
-// 0 = Dummy, 1 = Player
-newSnake.GetComponentInChildren<SnakeMovement>().SetBehaviour(behaviors[0]);
-```
-
-É possível instanciar múltiplas cobras e atribuir comportamentos diferentes com base nesse índice.
-
-Por fim, é possível definir qual cobra inicia com o foco da câmera, utilizando o índice `selectedId`:
-
-```csharp
-snakes[selectedId].GetComponentInChildren<SnakeMovement>().selected = true;
-
-```
-
+// 0 = Dummy, 1 = Player, 2 = SmartBot
+newSnake.GetComponentInChildren<SnakeMovement>().SetBehaviour(behaviors[2]);
 Ou, para um bot controlado pelo mouse:
 
 ```csharp
@@ -115,7 +115,6 @@ playerSnake.GetComponentInChildren<SnakeMovement>().SetBehaviour(behaviors[1]);
 // Define a cobra que inicia no foco da câmera
 playerSnake.GetComponentInChildren<SnakeMovement>().selected = true;
 ```
-
 
 ---
 
