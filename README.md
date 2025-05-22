@@ -4,14 +4,6 @@ Este projeto é uma simulação de cobrinhas autônomas controladas por Intelig�
 
 ---
 
-## 🎮 Demonstração
-
-> Agentes autônomos navegam por um ambiente bidimensional, tomando decisões baseadas em percepção, tamanho e distância.
-
-![Gameplay GIF](link-para-o-gif-ou-imagem-aqui)
-
----
-
 ## 🧠 Funcionalidades de IA
 
 As cobrinhas usam uma combinação de **comportamentos de steering** para decidir como se mover no ambiente:
@@ -22,22 +14,6 @@ As cobrinhas usam uma combinação de **comportamentos de steering** para decidi
 - **Priority Steering** – prioriza fugir > caçar > buscar orbes > andar aleatoriamente.
 
 ---
-
-## 📁 Estrutura do Projeto
-
-Assets/
-│
-├── Scripts/
-│ ├── SnakeMovement.cs # Comportamento base de movimento
-│ ├── AIBehaviour.cs # Classe base para comportamentos
-│ ├── PlayerbotAuto.cs # Comportamento autônomo do bot
-│
-├── Prefabs/
-│ ├── SnakePrefab
-│ └── Orb
-│
-├── Scenes/
-│ └── MainScene.unity
 
 ## 🛠️ Tecnologias
 
@@ -50,10 +26,17 @@ Assets/
 
 ## 📚 Referências Teóricas
 
-- *Artificial Intelligence for Games* – Ian Millington & John Funge
-- *Programming Game AI by Example* – Mat Buckland
-- *Steering Behaviors for Autonomous Characters* – Craig Reynolds (1999)
-- *Game AI Pro* – Steve Rabin (série)
+- Millington, I. (2019). *AI for Games* (3rd ed.). CRC Press.
+- Buckland, M. *Programming Game AI by Example*.
+- Reynolds, C. (1999). *Steering Behaviors for Autonomous Characters*.
+- Rabin, S. *Game AI Pro* (série).
+
+---
+
+## 🔗 Referências Adicionais
+
+- Jogo de referência: [Slither.io](https://slither.io)
+- Repositório base utilizado: [fellowssheep/IA2022-2](https://github.com/fellowsheep/IA2022-2)
 
 ---
 
@@ -62,3 +45,4 @@ Assets/
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/snake-ai-unity.git
+
